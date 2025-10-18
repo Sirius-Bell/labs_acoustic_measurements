@@ -1,3 +1,4 @@
+"""Import math, complex math and matplotlib"""
 from math import pi
 from cmath import sqrt
 import matplotlib.pyplot as plt
@@ -7,6 +8,7 @@ R = 10**3
 ug = 6
 
 def calc_ct(f, uz, ur):
+    """Calculate ct"""
     w = 2*pi*f
     return 1/(w*R*sqrt( (uz/ur)**2 - 0.25* ( ((ug**2 - uz**2)/ur**2) - 1)**2 ))
 
@@ -50,8 +52,8 @@ wp = 2*pi*fp
 Ld = 1 / ( wp**2 * K**2 * Ct )
 
 e = 1500
-p = 7300 
-l = 20*10**(-3) 
+p = 7300
+l = 20*10**(-3)
 
 d = sqrt( (pi*e*(fa-fp)*10**(-9)) / ( 576*p*l**2 * fp**3 ) ) # r
 
